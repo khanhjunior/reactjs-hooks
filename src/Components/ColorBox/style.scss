@@ -1,0 +1,11 @@
+.color-box-result {
+    $size-color-box: 200px;
+    width: $size-color-box;
+    height: $size-color-box;
+    background-color: black;
+    margin-bottom: 10px;
+}
+
+button {
+    cursor: pointer;
+}
