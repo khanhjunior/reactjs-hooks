@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import './style.scss'
 
-const Create = (props) => {
+const CreateForm = (props) => {
     const { onSubmit } = props
     const [value, setValue] = useState('')
 
@@ -25,4 +24,4 @@ const Create = (props) => {
     )
 }
 
-export default Create
+export default CreateForm

@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import ColorBox from './Components/ColorBox'
+import CreateForm from './Components/CreateForm'
 import TodoList from './Components/TodoList'
-import Create from './Components/Create'
+import PostFiltersForm from './Components/PostFiltersForm'
 import PostList from './Components/PostListUseEffect'
 import Pagination from './Components/Pagination'
-import PostFiltersForm from './Components/PostFiltersForm'
-import Clock from './Components/ClockCleanUp'
+import Clock from './Components/Clock'
+
 import './App.scss'
 
 const initCourses = [
@@ -41,10 +42,10 @@ const App = () => {
     useEffect(() => {
         const fetchPostList = async () => {
             try {
-                const requestUrl = 
+                const requestUrl =
                     'http://js-post-api.herokuapp.com/api/posts'
                     + `?_limit=${filters._limit}&_page=${filters._page}&title_like=${filters.title_like}`
-                
+
                 const response = await fetch(requestUrl)
                 const responseJson = await response.json()
 
@@ -101,7 +102,7 @@ const App = () => {
             <hr />
             <div>
                 <h1>React Hooks - Todo List - Create & Remove</h1>
-                <Create onSubmit={handleFormSubmit} />
+                <CreateForm onSubmit={handleFormSubmit} />
                 <TodoList
                     courses={courses}
                     onTodoClick={handleRemoveClick}

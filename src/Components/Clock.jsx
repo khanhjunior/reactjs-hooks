@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
 const formatDate = (date) => {
-    
-
     const hours = `0${date.getHours()}`.slice(-2)
     const minutes = `0${date.getMinutes()}`.slice(-2)
     const seconds = `0${date.getSeconds()}`.slice(-2)
@@ -29,7 +27,7 @@ const Clock = () => {
 
     return (
         <div className="clock-container">
-            <p style={{fontSize: '42px'}}>{timeString}</p>
+            <p style={{ fontSize: '42px' }}>{timeString}</p>
         </div>
     )
 }

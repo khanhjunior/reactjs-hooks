@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import './style.scss'
 
 const getColorFromRandom = () => {
     const firstParam = Math.floor(Math.random() * 256)

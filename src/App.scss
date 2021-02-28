@@ -5,3 +5,43 @@
   list-style: none;
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.color-box-result {
+  $size-color-box: 200px;
+  width: $size-color-box;
+  height: $size-color-box;
+  background-color: black;
+  margin-bottom: 10px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn-submit {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.post-list {
+  li {
+      list-style-type: disc;
+      margin-bottom: 10px;
+  }
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  
+  .todo-item {
+      margin-bottom: 10px;
+      color: gray;
+      display: inline-block;
+      
+      button {
+          cursor: pointer;
+          margin-left: 10px;
+      }
+  }
+}
