@@ -6,7 +6,7 @@ import PostFiltersForm from './Components/PostFiltersForm'
 import PostList from './Components/PostListUseEffect'
 import Pagination from './Components/Pagination'
 import Clock from './Components/Clock'
-
+import MagicColorBox from './Components/MagicColorBox'
 import './App.scss'
 
 const initCourses = [
@@ -115,9 +115,14 @@ const App = () => {
                 <Pagination pagination={pagination} onPageChange={handlePageClick} />
             </div>
             <hr />
-            <h1>React Hooks - Clock Clean Up</h1>
-            {isClock && <Clock />}
-            <button type="button" onClick={() => setIsClock(!isClock)}>{isClock ? 'Hide' : 'Show'}</button>
+            <div>
+                <h1>React Hooks - Clock Clean Up</h1>
+                {isClock && <Clock />}
+                <button type="button" onClick={() => setIsClock(!isClock)}>{isClock ? 'Hide' : 'Show'}</button>
+            </div>
+            <div>
+                <MagicColorBox />
+            </div>
         </React.Fragment>
     )
 }
